@@ -1,0 +1,233 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    width:100%;
+    overflow-x: hidden !important;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: "Arial";
+}
+* {
+    box-sizing: border-box;
+}
+
+.top-page-services
+{
+    background-image: url("services-background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display:inline-block;
+    min-height: 100%;
+    width: 100%;
+    color: #eee;
+
+}
+
+.top-page-home
+{
+    background-image: url("background-placeholder.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display:inline-block;
+    min-height: 100%;
+    width: 100%;
+    color: #eee;
+
+}
+#text-content
+{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    margin:auto;
+    display: block;
+    width:50%;
+    margin-top: 20px;
+}
+#scroll-button
+{
+    background-color: #267ec7; /* Green */
+    border: none;
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 5px;
+    display: block;
+}
+#scroll-button:hover 
+{
+    background-color: rgb(5, 62, 167); /* Add a dark-grey background on hover */
+}
+
+.title
+{
+    font-size: 50px;
+    padding-top: 100px;
+    text-align: center;
+}
+.phone-number
+{
+    font-size:24px;
+    margin-top: 40px;
+    text-align: center;
+}
+#top-bar
+{
+    width: 100%;
+    transition: 0.5s;
+    color: #eee;
+}
+#low-bar
+{
+    height: 80px;
+    width: 100%;
+    background-color: #262626;
+    
+}
+a
+{
+    text-decoration: none;
+}
+
+
+ul {
+    list-style-type: none;
+    font-size: 16px;
+    margin-top: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+.nav{
+    width:100%;
+    float: right;
+    position:fixed;
+}
+li {
+    float: right;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+li a {
+    display: block;
+    color: #eee;
+    text-align: center;
+}
+
+li a:focus {
+    display: block;
+    color: rgb(15, 134, 247);
+    text-align: center;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+label
+{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.accordion 
+{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.active, .accordion:hover 
+{
+    background-color: #ccc; 
+}
+
+
+/* This adds a gutter to the grid */
+[class*="col-"] {
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+
+/* Media query for mobile: */
+@media only screen and (min-width: 0px) {
+    
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+/* Media query for tablet: */
+@media only screen and (min-width: 767px) {
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 11%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+}
+
+/* Media query for laptop: */
+@media only screen and (min-width: 1023px) 
+{
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/* Media query for desktop: */
+@media only screen and (min-width: 1439px) {
+    .col-d-1 {width: 8.33%;}
+    .col-d-2 {width: 16.66%;}
+    .col-d-3 {width: 25%;}
+    .col-d-4 {width: 33.33%;}
+    .col-d-5 {width: 41.66%;}
+    .col-d-6 {width: 50%;}
+    .col-d-7 {width: 58.33%;}
+    .col-d-8 {width: 66.66%;}
+    .col-d-9 {width: 75%;}
+    .col-d-10 {width: 83.33%;}
+    .col-d-11 {width: 91.66%;}
+    .col-d-12 {width: 100%;}
+}

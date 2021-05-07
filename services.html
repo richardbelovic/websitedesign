@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="consultingstyle.css">
+    <title>Consulting Website Design</title>
+</head>
+<body>
+    <div class="top-page-services"> 
+        <div id ="top-bar"> 
+            <div class="col-d-4">
+                <img src="logo_placeholder.png" style="margin-top: 10px; width: 40%; padding:0">
+            </div>
+            <div class="col-d-8">
+                <nav> 
+                    <ul>
+                        <li><a href="contact.html"><b>CONTACT</b></a></li>
+                        <li><a href="projects.html"><b>PROJECTS</b></a></li>
+                        <li><a href="expertise.html"><b>AREAS OF EXPERTISE</b></a></li>
+                        <li><a href="services.html"><b>SERVICES</b></a></li>
+                        <li><a href="index.html"><b>HOME</b></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="col-d-12">
+            <div class="title">
+                <b>COMPANY NAME SERVICES</b>
+            </div>
+        </div>
+        <div class="col-d-12">
+            <div class="phone-number">
+                <b><i>Call now at 12345 678910</i></b>
+            </div>
+        </div>
+        <div class="col-d-12">
+            <input id="scroll-button" onclick="location.href='#text-content';" value="More Information" />
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="col-d-12">
+        <div id="text-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta nec ipsum eu pellentesque. Proin purus est, convallis vitae viverra id, eleifend non purus. Suspendisse egestas at leo nec lobortis. Duis nunc enim, malesuada ut purus non, imperdiet pharetra mi.
+            <br>
+            <br>
+            Pellentesque vel augue lacus. Vivamus vitae erat auctor, porta mauris a, venenatis urna. Suspendisse ac ornare erat. Donec luctus lorem et urna suscipit, convallis ultrices elit consectetur. Aliquam rhoncus posuere enim, eget bibendum tellus ultricies ac. Nam at lobortis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ultricies posuere lectus. Phasellus dapibus magna ligula, id commodo diam scelerisque nec. Vivamus mi libero, ultrices sit amet tortor at, pretium pretium arcu. Pellentesque eget magna vitae elit egestas ultrices. Nullam id cursus felis.
+            <br>
+            <br>
+            Morbi scelerisque consectetur libero, id tincidunt ex euismod vel. Phasellus suscipit cursus ornare. Pellentesque gravida, dolor sed maximus lacinia, sem ipsum hendrerit elit, vitae ullamcorper nibh sem facilisis ligula. Aliquam id vestibulum est. Duis in augue mi. Pellentesque pulvinar, velit nec vestibulum pharetra, enim lectus luctus dolor, vel malesuada ex quam sed lectus. Vivamus quam ipsum, porttitor vitae mollis a, fermentum a dui. Vivamus suscipit eu urna at dictum.
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta nec ipsum eu pellentesque. Proin purus est, convallis vitae viverra id, eleifend non purus. Suspendisse egestas at leo nec lobortis. Duis nunc enim, malesuada ut purus non, imperdiet pharetra mi.
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta nec ipsum eu pellentesque. Proin purus est, convallis vitae viverra id, eleifend non purus. Suspendisse egestas at leo nec lobortis. Duis nunc enim, malesuada ut purus non, imperdiet pharetra mi.
+            <br>
+            <br>
+            Pellentesque vel augue lacus. Vivamus vitae erat auctor, porta mauris a, venenatis urna. Suspendisse ac ornare erat. Donec luctus lorem et urna suscipit, convallis ultrices elit consectetur. Aliquam rhoncus posuere enim, eget bibendum tellus ultricies ac. Nam at lobortis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ultricies posuere lectus. Phasellus dapibus magna ligula, id commodo diam scelerisque nec. Vivamus mi libero, ultrices sit amet tortor at, pretium pretium arcu. Pellentesque eget magna vitae elit egestas ultrices. Nullam id cursus felis.
+            <br>
+            <br>
+            Morbi scelerisque consectetur libero, id tincidunt ex euismod vel. Phasellus suscipit cursus ornare. Pellentesque gravida, dolor sed maximus lacinia, sem ipsum hendrerit elit, vitae ullamcorper nibh sem facilisis ligula. Aliquam id vestibulum est. Duis in augue mi. Pellentesque pulvinar, velit nec vestibulum pharetra, enim lectus luctus dolor, vel malesuada ex quam sed lectus. Vivamus quam ipsum, porttitor vitae mollis a, fermentum a dui. Vivamus suscipit eu urna at dictum.
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta nec ipsum eu pellentesque. Proin purus est, convallis vitae viverra id, eleifend non purus. Suspendisse egestas at leo nec lobortis. Duis nunc enim, malesuada ut purus non, imperdiet pharetra mi.
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div class="col-d-12" style="padding: 0;">
+
+        <div id="low-bar" style="color: white;">
+            <div style="text-align: center; display:block; padding-top: 10px;">
+                COPYRIGHT © COMPANY NAME PRIVACY POLICY
+                <br>
+                CALL 01234 123445
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction()
+        {
+            if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120)
+            {
+                document.getElementById("top-bar").style.backgroundColor = "#262626";
+                document.getElementById("top-bar").style.position = "fixed";
+                document.getElementById("top-bar").style.top = "0";
+            }
+            else
+            {
+                document.getElementById("top-bar").style.backgroundColor = "transparent";
+                document.getElementById("top-bar").style.position = "static";
+                document.getElementById("top-bar").style.top = "auto";
+            }
+        }
+    </script>
+</body>

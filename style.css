@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.content{
+    outline-style: solid;
+    outline-width: 1px;
+    display: block;
+}
+
+h2
+{
+    text-align: center;
+}
+p
+{
+    padding: 5px;
+}
+ul {
+    list-style-type: none;
+    font-size: 11px;
+    margin-top: 15px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+    width: 20%;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 8px;
+    text-decoration: underline;
+    outline-style: solid;
+    outline-color: black;
+    
+}
+
+li a:focus {
+    display: block;
+    color: rgb(15, 134, 247);
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: underline;
+    outline-style: solid;
+    outline-color: black;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+label
+{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.accordion 
+{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.active, .accordion:hover 
+{
+    background-color: #ccc; 
+}
+
+
+/* This adds a gutter to the grid */
+[class*="col-"] {
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+
+/* Media query for mobile: */
+@media only screen and (min-width: 0px) {
+    
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    .banner { display: none; }
+    .content-banner{ display: none; }
+    .icon { 
+        width: 90px; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav{
+        min-width:40px;
+        min-height:40px;
+        overflow:hidden;
+    }
+    nav ul{
+        overflow:hidden;
+        width:0;
+        height:0;
+        padding:0;
+        margin:0;
+        list-style:none;
+    }
+    nav input:checked ~ ul{
+        width:100%;
+        height:100%;
+    }
+    nav input{ display:none; }
+    nav input:checked ~ label span:last-child{ display:none; }
+    nav input:not(:checked) ~ label span:first-child{ display:none; }
+    .panel {
+        display: none;
+        background-color: white;
+        overflow: hidden;
+    }
+}
+
+/* Media query for tablet: */
+@media only screen and (min-width: 767px) {
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 11%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+    .banner { display: none; }
+    .icon {  
+        display: block;
+        float:left;
+        width: 70px;
+    }
+    .content-banner{
+        display: none;
+    }
+    nav{
+        min-width:40px;
+        min-height:40px;
+        overflow:hidden;
+    }
+    nav ul{
+        overflow:hidden;
+        width:0;
+        height:0;
+        padding:0;
+        margin:0;
+        list-style:none;
+    }
+    nav input:checked ~ ul{
+        width:100%;
+        height:100%;
+    }
+    nav input{ display:none; }
+    nav input:checked ~ label span:last-child{ display:none; }
+    nav input:not(:checked) ~ label span:first-child{ display:none; }
+    .panel {
+        display: none;
+        background-color: white;
+        overflow: hidden;
+    }
+
+}
+
+/* Media query for laptop: */
+@media only screen and (min-width: 1023px) 
+{
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .banner { display: block; }
+    .icon { 
+        width: 100%; 
+        display: block;
+        float:left;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content-banner{
+        outline-style: solid;
+        outline-width: 1px;
+        display: block;
+    }
+    nav input ~ ul{
+        width:100%;
+        height:100%;
+    }
+    nav input:not(:checked) ~ label{
+        display:none;
+    }
+    .panel 
+    {
+        display: block;
+        background-color: white;
+        overflow: hidden;
+    }
+}
+
+/* Media query for desktop: */
+@media only screen and (min-width: 1439px) {
+    .col-d-1 {width: 8.33%;}
+    .col-d-2 {width: 16.66%;}
+    .col-d-3 {width: 25%;}
+    .col-d-4 {width: 33.33%;}
+    .col-d-5 {width: 41.66%;}
+    .col-d-6 {width: 50%;}
+    .col-d-7 {width: 58.33%;}
+    .col-d-8 {width: 66.66%;}
+    .col-d-9 {width: 75%;}
+    .col-d-10 {width: 83.33%;}
+    .col-d-11 {width: 91.66%;}
+    .col-d-12 {width: 100%;}
+    .banner { display: block; }
+    .icon { 
+        width: 160px; 
+        display: block;
+        float:right;
+        margin-top: 20px;
+    }
+    .content-banner{
+        outline-style: solid;
+        outline-width: 1px;
+        display: block;
+    }
+    nav input:not(:checked) ~ label{
+        display:none;
+    }
+
+    .panel 
+    {
+        display: block;
+        background-color: white;
+        overflow: hidden;
+    }
+}
