@@ -18,28 +18,32 @@ html {
 {
     background-image: url("services-background.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    background-attachment:scroll;
+    background-size: cover;
+    background-origin: content-box;
     display:inline-block;
     min-height: 100%;
     width: 100%;
-    color: #eee;
-
+    color: white;
 }
 
 .top-page-home
 {
     background-image: url("background-placeholder.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    background-attachment:scroll;
+    background-size: cover;
+    background-origin: content-box;
     display:inline-block;
     min-height: 100%;
     width: 100%;
-    color: #eee;
-
+    overflow: hidden;
+    color: white;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
 }
 #text-content
 {
@@ -49,7 +53,9 @@ html {
     margin:auto;
     display: block;
     width:50%;
+    min-width: 400px;
     margin-top: 20px;
+    
 }
 #scroll-button
 {
@@ -80,12 +86,14 @@ html {
     font-size:24px;
     margin-top: 40px;
     text-align: center;
+    display: block;
 }
 #top-bar
 {
     width: 100%;
     transition: 0.5s;
-    color: #eee;
+    color: #262626;
+    background-color: #262626;
 }
 #low-bar
 {
@@ -93,11 +101,7 @@ html {
     width: 100%;
     background-color: #262626;
     
-}
-a
-{
-    text-decoration: none;
-}
+}  
 
 
 ul {
@@ -105,28 +109,23 @@ ul {
     font-size: 16px;
     margin-top: 30px;
     overflow: hidden;
-    width: 100%;
+    color: white;
 }
 .nav{
     width:100%;
-    float: right;
     position:fixed;
+    color: white;
 }
-li {
-    float: right;
-    padding-left: 20px;
-    padding-right: 50px;
-}
-li a {
-    display: block;
-    color: #eee;
-    text-align: center;
+
+li a
+{
+    color: white;
+    text-decoration: none;
 }
 
 li a:focus {
     display: block;
-    color: rgb(15, 134, 247);
-    text-align: center;
+    color: rgb(255, 255, 255);
 }
 
 .row::after {
@@ -137,23 +136,11 @@ li a:focus {
 
 label
 {
-    display: inline-block;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 40px;
-}
-
-.accordion 
-{
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
-
-.active, .accordion:hover 
-{
-    background-color: #ccc; 
+    text-align: right;
+    float: right;
+    color: white;
 }
 
 
@@ -181,6 +168,40 @@ label
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
+    li {
+        padding-right: 10px;
+        padding-top:10px;
+        display: block;
+        float:none;
+        text-align: right;
+        color: #eee;
+        background-color: #262626;
+    }
+    nav{
+        width:230px;
+        overflow:visible;
+        float: right;
+        position: relative;
+    }
+    nav ul{
+        overflow:hidden;
+        width: 0;
+        height: 0;
+        margin:0;
+        padding:0;
+        
+    }
+    nav input:checked ~ ul{
+        width: 100%;
+        height:100%;
+        background-color: #262626;
+        position: absolute;
+        top:60px;
+        overflow: visible;
+    }
+    nav input{ display:none; }
+    nav input:checked ~ label span:last-child{ display:none; }
+    nav input:not(:checked) ~ label span:first-child{ display:none; }
 }
 
 /* Media query for tablet: */
@@ -197,6 +218,41 @@ label
     .col-t-10 {width: 83.33%;}
     .col-t-11 {width: 91.66%;}
     .col-t-12 {width: 100%;}
+    li {
+        padding-right: 10px;
+        padding-top:10px;
+        display: block;
+        float:none;
+        text-align: right;
+        color: #eee;
+        background-color: #262626;
+    }
+    nav{
+        width:230px;
+        overflow:visible;
+        float: right;
+        position: relative;
+    }
+    nav ul{
+        overflow:hidden;
+        width: 0;
+        height: 0;
+        margin:0;
+        padding:0;
+        
+    }
+    nav input:checked ~ ul{
+        width: 100%;
+        height:100%;
+        background-color: #262626;
+        position: absolute;
+        top:60px;
+        overflow: visible;
+    }
+    nav input{ display:none; }
+    nav input:checked ~ label span:last-child{ display:none; }
+    nav input:not(:checked) ~ label span:first-child{ display:none; }
+
 }
 
 /* Media query for laptop: */
@@ -214,6 +270,35 @@ label
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    li {
+        padding-right: 30px;
+        display: block;
+        float:right;
+        text-align: right;
+        color: #eee;
+        background-color: transparent;
+    }
+    nav ul {
+        list-style-type: none;
+        font-size: 16px;
+        margin-top: 30px;
+        overflow: hidden;
+        width: 100%;
+    }
+    nav input ~ ul{
+        width:100%;
+        height:100%;
+    }
+    nav input:checked ~ ul{
+        width: 100%;
+        height:100%;
+    }
+    nav input:not(:checked) ~ label{
+        display:none;
+    }
+    nav {
+        width: 100%;
+    }
 }
 
 /* Media query for desktop: */
@@ -230,4 +315,29 @@ label
     .col-d-10 {width: 83.33%;}
     .col-d-11 {width: 91.66%;}
     .col-d-12 {width: 100%;}
+    li {
+        padding-right: 50px;
+        display: block;
+        float:right;
+        text-align: right;
+        color: #eee;
+        background-color: transparent;
+    }
+    nav input:checked ~ ul{
+        width: 100%;
+        height:100%;
+    }
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        list-style-type: none;
+        font-size: 16px;
+        margin-top: 30px;
+        overflow: hidden;
+        width: 100%;
+    }
+    nav input:not(:checked) ~ label{
+        display:none;
+    }
 }

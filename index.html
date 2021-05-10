@@ -6,46 +6,52 @@
     <title>Consulting Website Design</title>
 </head>
 <body>
-    <div class="top-page-home"> 
-        <div id ="top-bar"> 
-            <div class="col-d-4">
-                <img src="logo_placeholder.png" style="margin-top: 10px; width: 40%; padding:0">
+    <div class="row">
+        <div class="top-page-home"> 
+            <div class="row">
+                <div id ="top-bar"> 
+                    <div class="col-d-4 col-3 col-t-3 col-s-3">
+                        <img src="logo_placeholder.png" style="margin-top: 10px; min-width: 200px; max-width: 300px; padding:0">
+                    </div>
+                    <div class="col-d-8 col-9 col-t-9 col-s-9">
+                        <nav> 
+                            <input type="checkbox" id="menuToggle">
+                            <label for="menuToggle"><span>&times;</span><span >&#9776;</label>
+                            <ul>
+                                <li><a href="contact.html"><b>CONTACT</b></a></li>
+                                <li><a href="projects.html"><b>PROJECTS</b></a></li>
+                                <li><a href="expertise.html"><b>AREAS OF EXPERTISE</b></a></li>
+                                <li><a href="services.html"><b>SERVICES</b></a></li>
+                                <li><a href="index.html"><b>HOME</b></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
-            <div class="col-d-8">
-                <nav> 
-                    <ul>
-                        <li><a href="contact.html"><b>CONTACT</b></a></li>
-                        <li><a href="projects.html"><b>PROJECTS</b></a></li>
-                        <li><a href="expertise.html"><b>AREAS OF EXPERTISE</b></a></li>
-                        <li><a href="services.html"><b>SERVICES</b></a></li>
-                        <li><a href="index.html"><b>HOME</b></a></li>
-                    </ul>
-                </nav>
+            <div class="col-d-12 col-12 col-t-12 col-s-12">
+                <div class="title">
+                    <b>COMPANY NAME</b>
+                </div>
             </div>
-        </div>
-        <div class="col-d-12">
-            <div class="title">
-                <b>COMPANY NAME</b>
+            <div class="col-d-12 col-12 col-t-12 col-s-12">
+                <div class="phone-number">
+                    <b><i>Call now at 12345 678910</i></b>
+                </div>
             </div>
-        </div>
-        <div class="col-d-12">
-            <div class="phone-number">
-                <b><i>Call now at 12345 678910</i></b>
+            <div class="col-d-12 col-12 col-t-12 col-s-12">
+                <input id="scroll-button" onclick="location.href='#text-content';" value="More Information" />
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
-        </div>
-        <div class="col-d-12">
-            <input id="scroll-button" onclick="location.href='#text-content';" value="More Information" />
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
         </div>
     </div>
-    <div class="col-d-12">
+    <div class="col-d-12 col-12 col-t-12 col-s-12">
         <div id="text-content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta nec ipsum eu pellentesque. Proin purus est, convallis vitae viverra id, eleifend non purus. Suspendisse egestas at leo nec lobortis. Duis nunc enim, malesuada ut purus non, imperdiet pharetra mi.
             <br>
@@ -74,7 +80,7 @@
         </div>
     </div>
 
-    <div class="col-d-12" style="padding: 0;">
+    <div class="col-d-12 col-12 col-t-12 col-s-12" style="padding: 0;">
 
         <div id="low-bar" style="color: white;">
             <div style="text-align: center; display:block; padding-top: 10px;">
@@ -87,7 +93,11 @@
     </div>
     <script>
         window.onscroll = function() {scrollFunction()};
-
+        window.addEventListener('resize', function() {
+            if (window.matchMedia('(min-width: 1023px)').matches) {
+                document.getElementById('menuToggle').checked = false;
+            }
+        }, true);
         function scrollFunction()
         {
             if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120)
@@ -98,10 +108,19 @@
             }
             else
             {
-                document.getElementById("top-bar").style.backgroundColor = "transparent";
+                if(document.body.clientWidth < 1023)
+                {
+                    document.getElementById("top-bar").style.backgroundColor = "#262626";
+                }
+                else
+                {
+                    document.getElementById("top-bar").style.backgroundColor = "transparent";
+                }
+                
                 document.getElementById("top-bar").style.position = "static";
                 document.getElementById("top-bar").style.top = "auto";
             }
         }
+        
     </script>
 </body>
